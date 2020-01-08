@@ -1,5 +1,5 @@
 #!/bin/sh
-yum install -y yum-utils device-mapper-persistent-data lvm2
+yum install -y yum-utils device-mapper-persistent-data lvm2 epel-release python-pip
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum makecache fast
 rpm --import https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
@@ -8,5 +8,6 @@ systemctl enable docker
 systemctl start docker
 docker -v
 
-yum -y install epel-release && yum -y install python-pip && pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple && pip install docker-compose -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install --upgrade pip -i http://mirrors.aliyun.com/pypi/simple
+pip install docker-compose -i http://mirrors.aliyun.com/pypi/simple
 docker-compose -v

@@ -8,5 +8,5 @@ systemctl enable docker
 systemctl start docker
 docker -v
 
-yum -y install epel-release && yum -y install python-pip && pip install --upgrade pip && pip install docker-compose
+yum -y install epel-release && yum -y install python-pip && pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple && pip install docker-compose -i https://pypi.tuna.tsinghua.edu.cn/simple
 docker-compose -v

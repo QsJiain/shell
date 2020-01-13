@@ -34,7 +34,8 @@ dockerid=$(docker run --name v2ray -p:$port:8001 -d v2ray/official)
 docker exec v2ray sed -i "s/60ca58e9-003e-4c01-98de-c2223ae49153/${UUID}/g" "/etc/v2ray/config.json"
 #重启容器
 docker restart v2ray
-myip=$(curl -s whatismyip.akamai.com)
+#myip=$(curl -s whatismyip.akamai.com)
+myip=$(curl -s ipinfo.io/ip)
 echo ------------------------------------------------
 echo IP			:		$myip
 echo UUID		:		$UUID

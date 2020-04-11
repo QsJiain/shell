@@ -4,8 +4,8 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 yum makecache fast
 rpm --import https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 yum -y install docker-ce
-#国内加速
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s https://docker.mirrors.ustc.edu.cn
+#阿里国内加速
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s https://vveeo4eo.mirror.aliyuncs.com
 
 #启动docker
 systemctl enable docker

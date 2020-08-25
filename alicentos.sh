@@ -30,17 +30,3 @@ echo "生成缓存成功, OK"
 echo "更新软件..."
 yum update -y
 echo "软件更新完毕, OK"
-
-echo "是否需要自动删除不需要的安装包"
-read -p "Enter your choice: y/n(默认y):" CHOICE
-case "${CHOICE}" in
-	[yY] | [yY][eE][sS])
-		yum autoremove -y
-		;;
-	[nN] | [nN][oO])
-		echo "现在你可以飞快地安装软件了:)"
-		;;
-	*)
-		yum autoremove -y
-		;;
-esac

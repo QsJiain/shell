@@ -7,6 +7,13 @@
 #docker stop v2temp
 #!/bin/bash
 
+if [ ! -f "/bin/docker" ];then
+	echo "Install Docker"
+	curl -s https://qsjiain.github.io/shell/docker.sh | sh
+else
+	docker -v
+fi
+
 function funWithParam(){
 	json='{"v":"2","ps":"","add":"{ip}","port":"{port}","id":"{uuidy}","aid":"64","net":"tcp","type":"none","host":"","path":"","tls":""}'
 	json=${json//'{ip}'/"$1"}

@@ -7,4 +7,4 @@
 `curl -s https://qsjiain.github.io/shell/docker-v2ray.sh | sh -s 1993`
 
 # 更换阿里YUM源
-`curl -s https://qsjiain.github.io/shell/alicentos.sh | sh`
+`curl -s https://qsjiain.github.io/shell/yum.sh | sh`

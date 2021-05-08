@@ -6,7 +6,7 @@ rpm --import https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 yum -y install docker-ce
 #阿里国内加速
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s https://vveeo4eo.mirror.aliyuncs.com
-
+# "data-root":"/var/lib/docker"
 #启动docker
 systemctl enable docker
 systemctl restart docker

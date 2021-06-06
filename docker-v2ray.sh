@@ -37,7 +37,7 @@ if [ -n "$isrun" ]; then
  
 UUID=$(cat /proc/sys/kernel/random/uuid)
 #启动容器
-dockerid=$(docker run --name v2ray -p:$port:8001 -d v2fly/v2fly-core:v4.38.3)
+dockerid=$(docker run --name v2ray -p:$port:8001 -d v2ray/official)
 #替换uuid
 docker exec v2ray sed -i "s/60ca58e9-003e-4c01-98de-c2223ae49153/${UUID}/g" "/etc/v2ray/config.json"
 #重启容器

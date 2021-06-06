@@ -9,7 +9,7 @@
 
 if [ ! -f "/bin/docker" ];then
 	echo "Install Docker"
-	curl -s https://qsjiain.github.io/shell/docker.sh | sh
+	curl -s https://shell.jiajin.run/docker.sh | sh
 	echo "Install Docker Success"
 else
 	docker -v
